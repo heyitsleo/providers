@@ -1,7 +1,12 @@
-# @movie-web/providers
+# @heyitsleo/providers
 
 package that holds all providers of movie-web.
 Feel free to use for your own projects.
+
+usage:
+`npm i @heyitsleo/providers`
+`yarn add @heyitsleo/providers`
+`pnpm i @heyitsleo/providers`
 
 features:
 - scrape popular streaming websites
