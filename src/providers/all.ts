@@ -8,21 +8,28 @@ import { mixdropScraper } from '@/providers/embeds/mixdrop';
 import { mp4uploadScraper } from '@/providers/embeds/mp4upload';
 import { streambucketScraper } from '@/providers/embeds/streambucket';
 import { streamsbScraper } from '@/providers/embeds/streamsb';
+import { turbovidScraper } from '@/providers/embeds/turbovid';
 import { upcloudScraper } from '@/providers/embeds/upcloud';
 import { upstreamScraper } from '@/providers/embeds/upstream';
 import { vidsrcembedScraper } from '@/providers/embeds/vidsrc';
 import { vTubeScraper } from '@/providers/embeds/vtube';
+import { astraScraper, novaScraper, orionScraper } from '@/providers/embeds/whvx';
 import { autoembedScraper } from '@/providers/sources/autoembed';
+import { catflixScraper } from '@/providers/sources/catflix';
+import { ee3Scraper } from '@/providers/sources/ee3';
 import { flixhqScraper } from '@/providers/sources/flixhq/index';
+import { fsharetvScraper } from '@/providers/sources/fsharetv';
 import { goMoviesScraper } from '@/providers/sources/gomovies/index';
 import { insertunitScraper } from '@/providers/sources/insertunit';
 import { kissAsianScraper } from '@/providers/sources/kissasian/index';
 import { lookmovieScraper } from '@/providers/sources/lookmovie';
 import { nsbxScraper } from '@/providers/sources/nsbx';
+import { redStarScraper } from '@/providers/sources/redstar';
 import { remotestreamScraper } from '@/providers/sources/remotestream';
 import { showboxScraper } from '@/providers/sources/showbox/index';
 import { tugaflixScraper } from '@/providers/sources/tugaflix';
 import { vidsrcScraper } from '@/providers/sources/vidsrc/index';
+import { whvxScraper } from '@/providers/sources/whvx';
 import { zoechipScraper } from '@/providers/sources/zoechip';
 
 import {
@@ -49,6 +56,7 @@ import { vidplayScraper } from './embeds/vidplay';
 import { voeScraper } from './embeds/voe';
 import { warezcdnembedHlsScraper } from './embeds/warezcdn/hls';
 import { warezcdnembedMp4Scraper } from './embeds/warezcdn/mp4';
+import { warezPlayerScraper } from './embeds/warezcdn/warezplayer';
 import { wootlyScraper } from './embeds/wootly';
 import { goojaraScraper } from './sources/goojara';
 import { hdRezkaScraper } from './sources/hdrezka';
@@ -65,6 +73,7 @@ import { warezcdnScraper } from './sources/warezcdn';
 export function gatherAllSources(): Array<Sourcerer> {
   // all sources are gathered here
   return [
+    catflixScraper,
     flixhqScraper,
     remotestreamScraper,
     kissAsianScraper,
@@ -88,6 +97,10 @@ export function gatherAllSources(): Array<Sourcerer> {
     soaperTvScraper,
     autoembedScraper,
     tugaflixScraper,
+    ee3Scraper,
+    whvxScraper,
+    fsharetvScraper,
+    redStarScraper,
   ];
 }
 
@@ -123,6 +136,7 @@ export function gatherAllEmbeds(): Array<Embed> {
     vTubeScraper,
     warezcdnembedHlsScraper,
     warezcdnembedMp4Scraper,
+    warezPlayerScraper,
     bflixScraper,
     playm4uNMScraper,
     hydraxScraper,
@@ -131,5 +145,9 @@ export function gatherAllEmbeds(): Array<Embed> {
     autoembedBengaliScraper,
     autoembedTamilScraper,
     autoembedTeluguScraper,
+    turbovidScraper,
+    novaScraper,
+    astraScraper,
+    orionScraper,
   ];
 }

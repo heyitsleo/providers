@@ -1,5 +1,6 @@
 import { load } from 'cheerio';
 
+import { flags } from '@/entrypoint/utils/targets';
 import { SourcererEmbed, SourcererOutput, makeSourcerer } from '@/providers/base';
 import { MovieScrapeContext, ShowScrapeContext } from '@/utils/context';
 
@@ -81,8 +82,9 @@ const universalScraper = async (ctx: ShowScrapeContext | MovieScrapeContext): Pr
 export const vidSrcToScraper = makeSourcerer({
   id: 'vidsrcto',
   name: 'VidSrcTo',
+  disabled: true,
   scrapeMovie: universalScraper,
   scrapeShow: universalScraper,
-  flags: [],
+  flags: [flags.PROXY_BLOCKED],
   rank: 130,
 });
